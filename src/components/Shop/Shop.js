@@ -9,10 +9,8 @@ const Shop = () => {
     const handleAddToCart = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
-        addToDb(product.id)
+        addToDb(product.id);
     };
-
-
 
     return (
         <section className="bg-slate-50 py-12 md:py-24">
