@@ -25,15 +25,15 @@ const Header = () => {
                         onClick={() => toggleBtnState(!btnState)}
                         className="relative h-6 w-8 md:hidden">
                         <span
-                            className={`absolute left-1/2 top-0 block h-0.5 w-full origin-top-right -translate-x-1/2 transform rounded bg-orange-600 transition will-change-transform ${
+                            className={`absolute left-1/2 top-0 block h-0.5 w-full origin-top-right -translate-x-1/2 transform rounded bg-yellow-600 transition will-change-transform ${
                                 btnState ? "-rotate-45" : "rotate-0"
                             }`}></span>
                         <span
-                            className={`absolute left-1/2 top-1/2 block h-0.5 w-full origin-left -translate-y-1/2 -translate-x-1/2 transform rounded bg-orange-600 transition  will-change-transform ${
+                            className={`absolute left-1/2 top-1/2 block h-0.5 w-full origin-left -translate-y-1/2 -translate-x-1/2 transform rounded bg-yellow-600 transition  will-change-transform ${
                                 btnState ? "scale-x-0" : "scale-x-100"
                             }`}></span>
                         <span
-                            className={`absolute left-1/2 bottom-0 block h-0.5 w-full origin-bottom-right -translate-x-1/2 transform rounded bg-orange-600 transition will-change-transform ${
+                            className={`absolute left-1/2 bottom-0 block h-0.5 w-full origin-bottom-right -translate-x-1/2 transform rounded bg-yellow-600 transition will-change-transform ${
                                 btnState ? "rotate-45" : "rotate-0"
                             }`}></span>
                     </button>
