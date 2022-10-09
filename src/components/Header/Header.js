@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
-import NavLink from "../NavLink/NavLink";
+import MenuItem from "../MenuItem/MenuItem";
 
 const Header = () => {
     const routes = [
@@ -16,9 +17,9 @@ const Header = () => {
         <header className="header relative bg-slate-800 py-5">
             <div className="container">
                 <div className="flex items-center justify-between gap-8">
-                    <a href="/">
+                    <Link to="/">
                         <img src={logo} alt="" />
-                    </a>
+                    </Link>
                     <button
                         type="button"
                         onClick={() => toggleBtnState(!btnState)}
@@ -43,7 +44,7 @@ const Header = () => {
                                 : "invisible scale-y-0 opacity-0 md:visible md:scale-y-100 md:opacity-100"
                         }`}>
                         {routes.map((route) => (
-                            <NavLink key={route.id} route={route}></NavLink>
+                            <MenuItem key={route.id} route={route}></MenuItem>
                         ))}
                     </nav>
                 </div>
