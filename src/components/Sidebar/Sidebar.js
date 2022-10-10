@@ -3,11 +3,13 @@ import React from "react";
 const Sidebar = ({ cart }) => {
     // console.log(cart);
     let total = 0,
-        shipping = 0;
+        shipping = 0,
+        quantity =0;
 
     for (const product of cart) {
-        total = total + product.price;
-        shipping = shipping + product.shipping;
+        quantity = quantity + product.quantity;
+        total = total + product.price * product.quantity;
+        shipping = shipping + product.shipping * product.quantity;
     }
 
     const tax = total * 0.1;
@@ -19,7 +21,7 @@ const Sidebar = ({ cart }) => {
                 <ul className="mt-4">
                     <li className="flex flex-wrap items-center justify-between gap-2 py-2">
                         <span>Selected Items:</span>
-                        <span className="text-lg font-semibold">{cart.length}</span>
+                        <span className="text-lg font-semibold">{quantity}</span>
                     </li>
                     <li className="flex flex-wrap items-center justify-between gap-2 border-t border-orange-900/20 py-2">
                         <span>Total Price:</span>
