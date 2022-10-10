@@ -15,7 +15,7 @@ const Sidebar = ({ cart }) => {
     const tax = total * 0.1;
     const grandTotal = total + shipping + tax;
     return (
-        <div className="rounded-lg border border-orange-200 bg-yellow-100">
+        <div className="rounded-lg border border-orange-200 bg-orange-100">
             <div className="sticky top-0 p-6">
                 <h5 className="text-center text-2xl font-semibold">Order Summary</h5>
                 <ul className="mt-4">
@@ -37,11 +37,11 @@ const Sidebar = ({ cart }) => {
                     </li>
                     <li className="flex flex-wrap items-center justify-between gap-2 border-t border-orange-900/20 py-2">
                         <span>Grand Total:</span>
-                        <span className="text-lg font-semibold text-yellow-700">${grandTotal}</span>
+                        <span className="text-lg font-semibold text-orange-700">${grandTotal}</span>
                     </li>
                 </ul>
                 <div className="mt-8 grid gap-3">
-                    <button className="flex w-full items-center justify-center gap-2 rounded bg-yellow-600/80 px-6 py-3 text-center font-semibold uppercase tracking-wide text-white transition hover:bg-yellow-600/100">
+                    <button className="flex w-full items-center justify-center gap-2 rounded bg-orange-600/80 px-6 py-3 text-center font-semibold uppercase tracking-wide text-white transition hover:bg-orange-600/100">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"

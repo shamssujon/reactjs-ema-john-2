@@ -16,7 +16,7 @@ const Product = ({ product, handleAddToCart }) => {
                 <p className="mb-2 text-sm text-slate-600">
                     <a href="/">{category}</a>
                 </p>
-                <h6 className="mb-2 text-xl font-semibold capitalize transition hover:text-yellow-600">
+                <h6 className="mb-2 text-xl font-semibold capitalize transition hover:text-orange-600">
                     <a href="/" className="block">
                         {name.length > 30
                             ? name.slice(0, 30).toLowerCase() + "..."
@@ -25,7 +25,7 @@ const Product = ({ product, handleAddToCart }) => {
                 </h6>
                 <p className="text-lg">
                     <span className="text-slate-600">Price:</span>{" "}
-                    <span className="font-semibold text-yellow-600">${price}</span>
+                    <span className="font-semibold text-orange-600">${price}</span>
                 </p>
                 <p className="text-sm">
                     <span className="text-slate-600">+ Shipping:</span>{" "}
@@ -34,7 +34,7 @@ const Product = ({ product, handleAddToCart }) => {
             </div>
             <div className="pt-2">
                 <button
-                    className="flex w-full items-center justify-center gap-2 bg-yellow-600/80 px-6 py-3 text-center font-semibold uppercase tracking-wide text-white transition hover:bg-yellow-600/100"
+                    className="flex w-full items-center justify-center gap-2 bg-orange-600/80 px-6 py-3 text-center font-semibold uppercase tracking-wide text-white transition hover:bg-orange-600/100"
                     onClick={() => handleAddToCart(product)}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

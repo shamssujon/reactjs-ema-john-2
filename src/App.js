@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
+import OrdersPage from "./pages/OrdersPage";
 import ShopPage from "./pages/ShopPage";
 
 function App() {
@@ -14,7 +15,14 @@ function App() {
             <Route path="/" element={<MainLayout></MainLayout>}>
                 <Route path="/" element={<HomePage></HomePage>}></Route>
                 <Route path="/home" element={<HomePage></HomePage>}></Route>
-                <Route path="/shop" element={<ShopPage></ShopPage>}></Route>
+                <Route
+                    path="/orders"
+                    loader={() => fetch("products.json")}
+                    element={<OrdersPage></OrdersPage>}></Route>
+                <Route
+                    path="/shop"
+                    loader={() => fetch("products.json")}
+                    element={<ShopPage></ShopPage>}></Route>
             </Route>
         )
     );

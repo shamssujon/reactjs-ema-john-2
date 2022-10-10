@@ -8,7 +8,7 @@ const Hero = () => {
             <div className="container">
                 <div className="grid items-center gap-12 lg:grid-cols-2">
                     <div className="">
-                        <p className="mb-4 text-yellow-600">Sale up to 70% off</p>
+                        <p className="mb-4 text-orange-600">Sale up to 70% off</p>
                         <h1 className="mb-2 text-5xl font-bold">New Collection For Fall</h1>
                         <p className="text-lg">
                             Discover all the new arrivals of ready-to-wear collection.
@@ -16,7 +16,7 @@ const Hero = () => {
                         <div className="mt-8">
                             <Link
                                 to="/shop"
-                                className="inline-block rounded bg-yellow-600 py-4 px-8 text-lg font-semibold uppercase text-white">
+                                className="inline-block rounded bg-orange-600 py-4 px-8 text-lg font-semibold uppercase text-white">
                                 Shop now
                             </Link>
                         </div>
