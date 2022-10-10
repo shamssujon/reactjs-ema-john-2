@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { addToDb, getStoredCart } from "../../utilities/fakedb";
+import { addToDb, deleteShoppingCart, getStoredCart } from "../../utilities/fakedb";
 import Products from "../Products/Products";
 import Sidebar from "../Sidebar/Sidebar";
 
@@ -42,12 +42,18 @@ const Shop = () => {
         setCart(savedCart);
     }, [products]);
 
+    // Remove all from cart 
+    const handleClearCartBtn = () => {
+        setCart([]);
+        deleteShoppingCart();
+    };
+
     return (
         <section className="bg-slate-50 py-12 md:py-24">
             <div className="container">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
                     <Products handleAddToCart={handleAddToCart} products={products}></Products>
-                    <Sidebar cart={cart}></Sidebar>
+                    <Sidebar cart={cart} handleClearCartBtn={handleClearCartBtn}></Sidebar>
                 </div>
             </div>
         </section>

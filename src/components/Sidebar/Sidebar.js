@@ -1,10 +1,10 @@
 import React from "react";
 
-const Sidebar = ({ cart }) => {
+const Sidebar = ({ cart, handleClearCartBtn }) => {
     // console.log(cart);
     let total = 0,
         shipping = 0,
-        quantity =0;
+        quantity = 0;
 
     for (const product of cart) {
         quantity = quantity + product.quantity;
@@ -14,6 +14,7 @@ const Sidebar = ({ cart }) => {
 
     const tax = total * 0.1;
     const grandTotal = total + shipping + tax;
+
     return (
         <div className="rounded-lg border border-orange-200 bg-orange-100">
             <div className="sticky top-0 p-6">
@@ -56,7 +57,9 @@ const Sidebar = ({ cart }) => {
 
                         <span>Checkout</span>
                     </button>
-                    <button className="flex w-full items-center justify-center gap-2 rounded border border-rose-600/80 px-6 py-3 text-center font-semibold uppercase tracking-wide text-rose-600 transition hover:bg-rose-600/100 hover:text-white">
+                    <button
+                        onClick={handleClearCartBtn}
+                        className="flex w-full items-center justify-center gap-2 rounded border border-rose-600/80 px-6 py-3 text-center font-semibold uppercase tracking-wide text-rose-600 transition hover:bg-rose-600/100 hover:text-white">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"

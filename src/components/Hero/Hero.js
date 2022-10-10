@@ -16,7 +16,7 @@ const Hero = () => {
                         <div className="mt-8">
                             <Link
                                 to="/shop"
-                                className="inline-block rounded bg-orange-600 py-4 px-8 text-lg font-semibold uppercase text-white">
+                                className="inline-block rounded bg-orange-600/80 py-4 px-8 text-lg font-semibold uppercase text-white transition hover:bg-orange-600">
                                 Shop now
                             </Link>
                         </div>
