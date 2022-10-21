@@ -7,7 +7,9 @@ import {
 import MainLayout from "./layouts/MainLayout";
 import { productsAndCartLoader } from "./loaders/productsAndCartLoader";
 import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
 import OrdersPage from "./pages/OrdersPage";
+import RegisterPage from "./pages/RegisterPage";
 import ShopPage from "./pages/ShopPage";
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
                     path="/orders"
                     loader={productsAndCartLoader}
                     element={<OrdersPage></OrdersPage>}></Route>
+                    <Route path="/login" element={<LoginPage></LoginPage>}>Login</Route>
+                    <Route path="/register" element={<RegisterPage></RegisterPage>}>Register</Route>
             </Route>
         )
     );

@@ -8,8 +8,8 @@ const Header = () => {
         { id: 1, name: "Home", path: "/home" },
         { id: 2, name: "Shop", path: "/shop" },
         { id: 3, name: "Orders", path: "/orders" },
-        { id: 4, name: "About", path: "/about" },
-        { id: 5, name: "Contact", path: "/contact" },
+        { id: 4, name: "Login", path: "/login" },
+        { id: 5, name: "Register", path: "/register" },
     ];
 
     const [btnState, toggleBtnState] = useState(false);
