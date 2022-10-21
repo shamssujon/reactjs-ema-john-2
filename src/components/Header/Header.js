@@ -9,7 +9,7 @@ const Header = () => {
         { id: 2, name: "Shop", path: "/shop" },
         { id: 3, name: "Orders", path: "/orders" },
         { id: 4, name: "Login", path: "/login" },
-        { id: 5, name: "Register", path: "/register" },
+        { id: 5, name: "Sign up", path: "/signup" },
     ];
 
     const [btnState, toggleBtnState] = useState(false);

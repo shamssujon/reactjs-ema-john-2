@@ -9,7 +9,7 @@ import { productsAndCartLoader } from "./loaders/productsAndCartLoader";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import OrdersPage from "./pages/OrdersPage";
-import RegisterPage from "./pages/RegisterPage";
+import SignUpPage from "./pages/SignUpPage";
 import ShopPage from "./pages/ShopPage";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
                     loader={productsAndCartLoader}
                     element={<OrdersPage></OrdersPage>}></Route>
                     <Route path="/login" element={<LoginPage></LoginPage>}>Login</Route>
-                    <Route path="/register" element={<RegisterPage></RegisterPage>}>Register</Route>
+                    <Route path="/signup" element={<SignUpPage></SignUpPage>}>Register</Route>
             </Route>
         )
     );
