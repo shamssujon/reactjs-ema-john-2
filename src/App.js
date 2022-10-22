@@ -12,6 +12,7 @@ import OrdersPage from "./pages/OrdersPage";
 import SignUpPage from "./pages/SignUpPage";
 import ShopPage from "./pages/ShopPage";
 import ErrorPage from "./pages/ErrorPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
     const router = createBrowserRouter(
@@ -27,6 +28,7 @@ function App() {
                     path="/orders"
                     loader={productsAndCartLoader}
                     element={<OrdersPage></OrdersPage>}></Route>
+                <Route path="/checkout" element={<CheckoutPage></CheckoutPage>}></Route>
                 <Route path="/login" element={<LoginPage></LoginPage>}></Route>
                 <Route path="/signup" element={<SignUpPage></SignUpPage>}></Route>
                 <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
