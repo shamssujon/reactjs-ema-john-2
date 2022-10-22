@@ -11,6 +11,7 @@ import LoginPage from "./pages/LoginPage";
 import OrdersPage from "./pages/OrdersPage";
 import SignUpPage from "./pages/SignUpPage";
 import ShopPage from "./pages/ShopPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
     const router = createBrowserRouter(
@@ -28,6 +29,7 @@ function App() {
                     element={<OrdersPage></OrdersPage>}></Route>
                 <Route path="/login" element={<LoginPage></LoginPage>}></Route>
                 <Route path="/signup" element={<SignUpPage></SignUpPage>}></Route>
+                <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
             </Route>
         )
     );
