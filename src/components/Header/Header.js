@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/UserContext";
 import logo from "../../logo.svg";
 import MenuItem from "../MenuItem/MenuItem";
 
@@ -13,6 +14,20 @@ const Header = () => {
     ];
 
     const [btnState, toggleBtnState] = useState(false);
+
+    const { user, logOut } = useContext(AuthContext);
+
+    // Sign Out
+    const handleSignOut = () => {
+        logOut()
+            .then(() => {
+                console.log("Signed out");
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    };
+
     return (
         <header className="header relative bg-slate-800 py-5">
             <div className="container">
@@ -47,6 +62,17 @@ const Header = () => {
                             <MenuItem key={route.id} route={route}></MenuItem>
                         ))}
                     </nav>
+                    {user && (
+                        <div className="flex items-center gap-4 text-white">
+                            <span>{user?.email}</span>
+                            <button
+                                onClick={handleSignOut}
+                                type="button"
+                                className="rounded border border-white/70 py-2 px-4 transition hover:bg-white hover:text-rose-600">
+                                Sign out
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </header>

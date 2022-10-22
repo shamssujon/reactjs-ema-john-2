@@ -26,8 +26,8 @@ function App() {
                     path="/orders"
                     loader={productsAndCartLoader}
                     element={<OrdersPage></OrdersPage>}></Route>
-                    <Route path="/login" element={<LoginPage></LoginPage>}>Login</Route>
-                    <Route path="/signup" element={<SignUpPage></SignUpPage>}>Register</Route>
+                <Route path="/login" element={<LoginPage></LoginPage>}></Route>
+                <Route path="/signup" element={<SignUpPage></SignUpPage>}></Route>
             </Route>
         )
     );
