@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/UserContext";
 
 const LoginPage = () => {
+    const navigate = useNavigate();
     const { signIn } = useContext(AuthContext);
     const [error, setError] = useState(null);
 
@@ -23,6 +24,7 @@ const LoginPage = () => {
                 console.log(user);
                 form.reset();
                 setError(null);
+                navigate("/");
             })
             .catch((error) => {
                 console.error(error);
